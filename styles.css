@@ -1,0 +1,110 @@
+/* comment of CSS */
+/* 1.แต่งใคร? (id (ุควรจะมีสิ่งเดียวใน HTML), class, DOM) 2. แต่งอะไร?  */
+@font-face {
+    font-family: kanit;
+    src: url(./Kanit/Kanit-Regular.ttf);
+}
+
+body {
+    font-family: kanit;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: azure;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.register {
+    font-size: 24px;
+    text-align: center;
+}
+
+.header-form {
+    width: 140px;
+}
+
+.flex {
+    display: flex;
+}
+
+.form-input {
+    margin-bottom: 10px;
+}
+
+.input,
+textarea {
+    border: 1px gainsboro solid;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.button {
+    border:0;
+    width: 50%;
+    height: 40px;
+    background-color: #2962ff;
+    color: white;
+    
+}
+
+.message {
+    
+    padding: 10px;
+    background-color: lightgrey;
+    margin: 10px 0;
+    display: none;
+}
+
+.message.success {
+    background-color: lightgreen;
+    display: block;
+}
+
+.message.danger
+{
+    background-color: lightcoral;
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    .container .register {
+        font-size: 20px;
+    }
+    .button {
+        width: 100%;
+    } 
+}
+
+/*CSS Text styling : Font size, font Family, text align*/
+/*CSS Box Model : Margin, padding, border*/
+/*CSS Display : Block, Inline, Inline block, Flex, Grid ที่ใช้ในการจัดหน้า ตำแหน่งต่างๆ*/
+/*CSS Position : Static, Relative, Absolute(เล่นกับตำแหน่งบนหน้าจอ), Fixed(Scroll ไม่มีผลตำแหน่งจะอยู่เหมือนเดิม), 
+        Sticky (Relative ตอนเริ่ม, Fixed ตอนเลื่อน)*/
+/*CSS Float เป็นการทำให้ text เราลอย*/
+/*CSS Image : Blackground-image, size and position */
+/*CSS Unit : px, rem, em, vw, vh, percent */
+
+/* คำแนะนำ ว่าควรทำอะไรก่อน
+    1.จัดการ layout (flex,grid) จัดโครงให้ถูก
+    2.จัดการความสวยงาม
+    3.Responsive
+    4.Animation กับ ลูกเล่น 
+*/
+
+/* Note
+    - 640 px mobile
+    - 768 px tablet
+    - > 768 px desktop
+*/

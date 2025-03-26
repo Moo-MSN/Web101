@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ส่วนที่แสดงออกไปในหน้าจอของ Browser -->
+    <!-- 1. html content -->
+    <!-- H มีตั้งแต่ 1-6 โดย 6 จะใหญ่ที่สุด-->
+    <a href="user.html">Go to user management</a>
+
+    <div class="container">
+      <div class="register">Register Form</div>
+
+      <div class="flex form-input">
+        <div class="header-form">ชื่อจริง</div>
+        <input class="form" name="firstname" type="text" />
+      </div>
+
+      <div class="flex form-input">
+        <div class="header-form">นามสกุล</div>
+        <input class="form" name="lastname" type="text" />
+      </div>
+
+      <div class="flex form-input">
+        <div class="header-form">อายุ</div>
+        <input class="form" name="age" type="number" min="0" max="100" />
+      </div>
+
+      <div class="flex gender form-input">
+        <div class="header-form">เพศ:</div>
+        <div class="flex">
+          <!--ratio เลือกอันเดี่ยวว-->
+          <div><input name="gender" type="radio" value="male" />Male</div>
+
+          <div><input name="gender" type="radio" value="female" />Female</div>
+
+          <div><input name="gender" type="radio" value="other" />Other</div>
+        </div>
+      </div>
+
+      <div class="form-input">
+        Interest
+        <div>
+          <!--checkbox เลือกหลายอัน-->
+          <input name="interest" type="checkbox" value="book" />Book
+        </div>
+
+        <div><input name="interest" type="checkbox" value="video game" />Video Game</div>
+
+        <div><input name="interest" type="checkbox" value="political" />Political</div>
+      </div>
+
+      <div class="form-input">
+        คำอธิบายตัวตนเพิ่มเติม
+        <div>
+          <textarea name="description"></textarea>
+        </div>
+      </div>
+      <div class="form-input center">
+        <a href="https://www.google.co.th/">T&C</a>
+      </div>
+
+      <div id="response-message" class="message"></div>
+
+      <div class="center">
+        <button id="thisbutton" onclick="submitData()" class="button">ส่งข้อมูล</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <!-- เพิ่ม script axios เข้ามา-->
+    <script src="index.js"></script>
+  </body>
+</html>
